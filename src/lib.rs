@@ -36,6 +36,7 @@ macro_rules! dc1394_try {
     }
 }
 
+#[derive(Debug, Copy, Clone, PartialEq)]
 pub enum Tile {
     RGGB,
     GBRG,
@@ -54,6 +55,7 @@ impl From<Tile> for ffi::dc1394color_filter_t {
     }
 }
 
+#[derive(Debug, Copy, Clone, PartialEq)]
 pub enum Method {
     Nearest,
     Simple,
